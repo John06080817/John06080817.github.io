@@ -3,94 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>曼谷 3/13-3/17 行程表</title>
+    <title>Bangkok Vibe 2026 | 行程可視化</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .itinerary-card:hover { transform: translateY(-5px); transition: 0.3s; }
-        .map-btn { background-color: #4285F4; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .day-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .day-card:hover { transform: scale(1.02); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .transport-tag { font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; font-weight: bold; }
+        .tag-bts { background: #e0f2fe; color: #0369a1; }
+        .tag-grab { background: #dcfce7; color: #15803d; }
+        .tag-walk { background: #fef3c7; color: #92400e; }
+        .tag-boat { background: #ede9fe; color: #6d28d9; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="min-h-screen pb-12">
 
-    <header class="bg-emerald-600 text-white py-8 px-4 text-center shadow-lg">
-        <h1 class="text-3xl font-bold">Bangkok Trip 🇹🇭</h1>
-        <p class="mt-2 opacity-90">3/13 (五) - 3/17 (二) | 航班: CI833 / CI832</p>
+    <header class="relative h-64 flex items-center justify-center text-white overflow-hidden shadow-xl mb-10">
+        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80" class="absolute w-full h-full object-cover brightness-50" alt="Bangkok">
+        <div class="relative text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-widest mb-2 uppercase">Bangkok Vibe</h1>
+            <p class="text-lg opacity-90 font-light italic">3/13 - 3/17 | 2026 Travel Journal</p>
+            <div class="mt-4 flex justify-center gap-4 text-sm">
+                <span class="bg-white/20 px-3 py-1 rounded-full"><i class="fas fa-plane-arrival mr-2"></i>CI833 (09:50)</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full"><i class="fas fa-plane-departure mr-2"></i>CI832 (14:20)</span>
+            </div>
+        </div>
     </header>
 
-    <main class="max-w-4xl mx-auto p-4 space-y-6">
+    <main class="max-w-5xl mx-auto px-6">
         
-        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-blue-400">
-            <h2 class="text-xl font-bold text-blue-600 mb-4"><i class="fas fa-plane-arrival mr-2"></i>Day 1: 3/13 (五) 抵達曼谷</h2>
-            <ul class="space-y-3">
-                <li class="flex items-center justify-between">
-                    <span>10:15 抵達 BKK 機場 (CI833)</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport" target="_blank" class="map-btn"><i class="fas fa-map-marker-alt"></i> 地圖</a>
-                </li>
-                <li class="flex items-center justify-between">
-                    <span>飯店 Check-in (Phahonyothin Soi 9)</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=11/16+Phahonyothin+Soi+9" target="_blank" class="map-btn"><i class="fas fa-hotel"></i> 導航</a>
-                </li>
-                <li>傍晚：Ari 區巷弄咖啡廳 (Soi 7, Soi 9) 散步</li>
-                <li>晚餐：喬德夜市 (Jodd Fairs) 手抓海鮮</li>
-            </ul>
+        <section class="glass p-6 rounded-3xl mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-5">
+                <div class="bg-emerald-500 text-white w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl text-gray-800">Ginger Jar Ari</h3>
+                    <p class="text-gray-500 text-sm">Phahonyothin Soi 9, Bangkok</p>
+                </div>
+            </div>
+            <a href="https://maps.google.com/?q=Ginger+Jar+Ari" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-2xl hover:bg-black transition flex items-center gap-2 shadow-md">
+                <i class="fas fa-location-arrow"></i> 開啟地圖導航
+            </a>
         </section>
 
-        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-orange-400">
-            <h2 class="text-xl font-bold text-orange-600 mb-4"><i class="fas fa-train mr-2"></i>Day 2: 3/14 (六) 經典市集巡禮</h2>
-            <p class="text-sm text-gray-500 mb-3">交通建議：建議包車或參加 Klook/KKday 一日遊</p>
-            <ul class="space-y-3">
-                <li class="flex items-center justify-between">
-                    <span>美功鐵道市集 (Maeklong Railway Market)</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Maeklong+Railway+Market" target="_blank" class="map-btn">地圖</a>
-                </li>
-                <li class="flex items-center justify-between">
-                    <span>安帕瓦水上市場 (Amphawa) - 週六限定</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Amphawa+Floating+Market" target="_blank" class="map-btn">地圖</a>
-                </li>
-            </ul>
-        </section>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="day-card glass p-8 rounded-[2rem]">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-4xl font-bold text-gray-300">01</span>
+                    <span class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-lg font-bold">3/13 (五)</span>
+                </div>
+                <ul class="space-y-6">
+                    <li class="relative pl-6 border-l-2 border-gray-200">
+                        <span class="transport-tag tag-grab mb-1 inline-block">Grab</span>
+                        <p class="font-bold text-gray-800 italic">BKK 機場 ➔ 飯店</p>
+                    </li>
+                    <li class="relative pl-6 border-l-2 border-gray-200">
+                        <span class="transport-tag tag-walk mb-1 inline-block">Walk</span>
+                        <p class="text-gray-700">Ari 區午餐 & 文青咖啡廳</p>
+                    </li>
+                    <li class="relative pl-6 border-l-2 border-emerald-400">
+                        <span class="transport-tag tag-bts mb-1 inline-block">BTS: Ha Yaek Lat Phrao</span>
+                        <p class="font-bold text-gray-800">喬德夜市 (Jodd Fairs)</p>
+                    </li>
+                </ul>
+            </div>
 
-        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-emerald-400">
-            <h2 class="text-xl font-bold text-emerald-600 mb-4"><i class="fas fa-synagogue mr-2"></i>Day 3: 3/15 (日) 河畔經典與購物</h2>
-            <ul class="space-y-3">
-                <li>上午：大皇宮 & 玉佛寺 (Grand Palace)</li>
-                <li class="flex items-center justify-between">
-                    <span>下午：ICONSIAM 暹羅天地</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=ICONSIAM" target="_blank" class="map-btn">導航</a>
-                </li>
-                <li>晚上：昭披耶河畔晚餐或遊船</li>
-            </ul>
-        </section>
+            <div class="day-card glass p-8 rounded-[2rem]">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-4xl font-bold text-gray-300">02</span>
+                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-lg font-bold">3/14 (六)</span>
+                </div>
+                <ul class="space-y-6">
+                    <li class="relative pl-6 border-l-2 border-orange-400">
+                        <span class="transport-tag tag-bts mb-1 inline-block">BTS: Mo Chit</span>
+                        <p class="font-bold text-gray-800">洽圖洽週末市集 (Chatuchak)</p>
+                    </li>
+                    <li class="relative pl-6 border-l-2 border-gray-200">
+                        <span class="transport-tag tag-bts mb-1 inline-block">BTS: Siam</span>
+                        <p class="text-gray-700">Siam Square / 百貨公司購物</p>
+                    </li>
+                    <li class="relative pl-6 border-l-2 border-red-400">
+                        <span class="transport-tag tag-grab mb-1 inline-block">Grab / TukTuk</span>
+                        <p class="font-bold text-gray-800 underline decoration-red-300">朱拉隆功美食街 (Ban Tad Thong)</p>
+                    </li>
+                </ul>
+            </div>
 
-        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-purple-400">
-            <h2 class="text-xl font-bold text-purple-600 mb-4"><i class="fas fa-shopping-bag mr-2"></i>Day 4: 3/16 (一) 城市採買與高空景觀</h2>
-            <ul class="space-y-3">
-                <li>上午：Siam 商圈或 Central World 血拼</li>
-                <li class="flex items-center justify-between">
-                    <span>傍晚：Mahanakhon Skywalk 展望台</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Mahanakhon+Skywalk" target="_blank" class="map-btn">地圖</a>
-                </li>
-                <li>晚上：Let's Relax 按摩放鬆</li>
-            </ul>
-        </section>
+            <div class="day-card glass p-8 rounded-[2rem]">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-4xl font-bold text-gray-300">03</span>
+                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-lg font-bold">3/15 (日)</span>
+                </div>
+                <ul class="space-y-6 text-sm">
+                    <li class="p-4 bg-blue-50/50 rounded-2xl border border-blue-100">
+                        <p class="font-bold text-blue-800 mb-2"><i class="fas fa-van-shuttle mr-2"></i>包車一日遊專線</p>
+                        <ul class="space-y-2 text-gray-600 italic">
+                            <li>● 美功鐵道市集 Maeklong</li>
+                            <li>● 安帕瓦水上市場 Amphawa</li>
+                            <li>● 週末限定螢火蟲遊船</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-red-400">
-            <h2 class="text-xl font-bold text-red-600 mb-4"><i class="fas fa-plane-departure mr-2"></i>Day 5: 3/17 (二) 回程</h2>
-            <ul class="space-y-3">
-                <li>上午：Ari 區早午餐 / 最後伴手禮採買</li>
-                <li class="flex items-center justify-between">
-                    <span>12:00 前抵達 BKK 機場 (CI832 14:20起飛)</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport" target="_blank" class="map-btn">導航</a>
-                </li>
-            </ul>
-        </section>
+            <div class="day-card glass p-8 rounded-[2rem] lg:col-span-2">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-4xl font-bold text-gray-300">04</span>
+                    <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-lg font-bold">3/16 (一)</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <ul class="space-y-6">
+                        <li class="relative pl-6 border-l-2 border-purple-400">
+                            <span class="transport-tag tag-grab mb-1 inline-block">Grab (30 min)</span>
+                            <p class="font-bold text-gray-800">吞武里海鮮市場</p>
+                            <p class="text-xs text-gray-400 mt-1">現點現烤巨大生蠔、大頭蝦</p>
+                        </li>
+                        <li class="relative pl-6 border-l-2 border-gray-200">
+                            <span class="transport-tag tag-grab mb-1 inline-block">Grab</span>
+                            <p class="text-gray-700">ICONSIAM 百貨 / SookSiam</p>
+                        </li>
+                    </ul>
+                    <ul class="space-y-6">
+                        <li class="relative pl-6 border-l-2 border-indigo-400">
+                            <span class="transport-tag tag-boat mb-1 inline-block">Cross-River Boat</span>
+                            <p class="font-bold text-gray-800">嵩越路 Song Wat (文創老街)</p>
+                        </li>
+                        <li class="relative pl-6 border-l-2 border-pink-400">
+                            <span class="transport-tag tag-grab mb-1 inline-block">Tuk Tuk / Grab</span>
+                            <p class="font-bold text-gray-800">考山路 Khao San (微醺之夜)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="day-card glass p-8 rounded-[2rem]">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-4xl font-bold text-gray-300">05</span>
+                    <span class="bg-red-100 text-red-600 px-3 py-1 rounded-lg font-bold">3/17 (二)</span>
+                </div>
+                <ul class="space-y-6">
+                    <li class="relative pl-6 border-l-2 border-gray-200">
+                        <span class="transport-tag tag-walk mb-1 inline-block">Walk</span>
+                        <p class="text-gray-700">Ari 區最後採買 & 早午餐</p>
+                    </li>
+                    <li class="relative pl-6 border-l-2 border-red-500">
+                        <span class="transport-tag tag-grab mb-1 inline-block">Grab (11:20 啟程)</span>
+                        <p class="font-bold text-red-600 italic">BKK 機場 (CI832)</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer class="mt-12 text-center text-gray-400 text-sm italic">
+            <p>* 建議在台灣先安裝 Grab & Bolt 並綁定信用卡</p>
+            <p>* 吞武里市場建議 11:00 抵達，海鮮最齊全</p>
+        </footer>
     </main>
-
-    <footer class="text-center py-8 text-gray-400 text-sm">
-        <p>© 2026 Bangkok Trip Planner - Generated for Pickleball Fan</p>
-    </footer>
 
 </body>
 </html>
