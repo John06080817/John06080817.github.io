@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曼谷 3/13-3/17 行程表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .itinerary-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .map-btn { background-color: #4285F4; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="bg-emerald-600 text-white py-8 px-4 text-center shadow-lg">
+        <h1 class="text-3xl font-bold">Bangkok Trip 🇹🇭</h1>
+        <p class="mt-2 opacity-90">3/13 (五) - 3/17 (二) | 航班: CI833 / CI832</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4 space-y-6">
+        
+        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-blue-400">
+            <h2 class="text-xl font-bold text-blue-600 mb-4"><i class="fas fa-plane-arrival mr-2"></i>Day 1: 3/13 (五) 抵達曼谷</h2>
+            <ul class="space-y-3">
+                <li class="flex items-center justify-between">
+                    <span>10:15 抵達 BKK 機場 (CI833)</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport" target="_blank" class="map-btn"><i class="fas fa-map-marker-alt"></i> 地圖</a>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span>飯店 Check-in (Phahonyothin Soi 9)</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=11/16+Phahonyothin+Soi+9" target="_blank" class="map-btn"><i class="fas fa-hotel"></i> 導航</a>
+                </li>
+                <li>傍晚：Ari 區巷弄咖啡廳 (Soi 7, Soi 9) 散步</li>
+                <li>晚餐：喬德夜市 (Jodd Fairs) 手抓海鮮</li>
+            </ul>
+        </section>
+
+        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-orange-400">
+            <h2 class="text-xl font-bold text-orange-600 mb-4"><i class="fas fa-train mr-2"></i>Day 2: 3/14 (六) 經典市集巡禮</h2>
+            <p class="text-sm text-gray-500 mb-3">交通建議：建議包車或參加 Klook/KKday 一日遊</p>
+            <ul class="space-y-3">
+                <li class="flex items-center justify-between">
+                    <span>美功鐵道市集 (Maeklong Railway Market)</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Maeklong+Railway+Market" target="_blank" class="map-btn">地圖</a>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span>安帕瓦水上市場 (Amphawa) - 週六限定</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Amphawa+Floating+Market" target="_blank" class="map-btn">地圖</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-emerald-400">
+            <h2 class="text-xl font-bold text-emerald-600 mb-4"><i class="fas fa-synagogue mr-2"></i>Day 3: 3/15 (日) 河畔經典與購物</h2>
+            <ul class="space-y-3">
+                <li>上午：大皇宮 & 玉佛寺 (Grand Palace)</li>
+                <li class="flex items-center justify-between">
+                    <span>下午：ICONSIAM 暹羅天地</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=ICONSIAM" target="_blank" class="map-btn">導航</a>
+                </li>
+                <li>晚上：昭披耶河畔晚餐或遊船</li>
+            </ul>
+        </section>
+
+        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-purple-400">
+            <h2 class="text-xl font-bold text-purple-600 mb-4"><i class="fas fa-shopping-bag mr-2"></i>Day 4: 3/16 (一) 城市採買與高空景觀</h2>
+            <ul class="space-y-3">
+                <li>上午：Siam 商圈或 Central World 血拼</li>
+                <li class="flex items-center justify-between">
+                    <span>傍晚：Mahanakhon Skywalk 展望台</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mahanakhon+Skywalk" target="_blank" class="map-btn">地圖</a>
+                </li>
+                <li>晚上：Let's Relax 按摩放鬆</li>
+            </ul>
+        </section>
+
+        <section class="itinerary-card bg-white p-6 rounded-xl shadow-md border-l-8 border-red-400">
+            <h2 class="text-xl font-bold text-red-600 mb-4"><i class="fas fa-plane-departure mr-2"></i>Day 5: 3/17 (二) 回程</h2>
+            <ul class="space-y-3">
+                <li>上午：Ari 區早午餐 / 最後伴手禮採買</li>
+                <li class="flex items-center justify-between">
+                    <span>12:00 前抵達 BKK 機場 (CI832 14:20起飛)</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport" target="_blank" class="map-btn">導航</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-400 text-sm">
+        <p>© 2026 Bangkok Trip Planner - Generated for Pickleball Fan</p>
+    </footer>
+
+</body>
+</html>
